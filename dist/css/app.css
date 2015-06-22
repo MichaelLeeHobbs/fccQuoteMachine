@@ -31,6 +31,16 @@ h1 {
     color: whitesmoke;
 }
 
+#github > a, #github > a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+#github > a > i {
+    margin-top: 30px;
+    margin-right: 5px;
+}
+
 @media only screen and (max-device-width: 480px) {
     h1 {
         font-size: 24px;

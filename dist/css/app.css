@@ -14,11 +14,11 @@ h1 {
     font-size: 36px;
 }
 
-#newButton {
+#newButton, #tweetIt {
     display: block;
     background-color: #000;
     border-radius: 90px;
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 20px;
     border: none;
     outline:none;
@@ -26,7 +26,7 @@ h1 {
     color: whitesmoke;
 }
 
-#newButton:hover {
+#newButton:hover, #tweetIt:hover {
     text-decoration: none;
     color: whitesmoke;
 }
@@ -48,7 +48,7 @@ h1 {
     #quoteContainer {
         font-size: 18px;
     }
-    #newButton {
+    button {
         font-size: 16px;
     }
 }

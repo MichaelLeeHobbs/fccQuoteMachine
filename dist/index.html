@@ -34,18 +34,22 @@
                 <div class="col-xs-8 col-xs-offset-2">
                     <h1 class="text-center">Some Of My Favorite Quotes</h1>
                 </div>
-                <div class="col-xs-2" id="github"><a href="https://github.com/MichaelLeeHobbs/fccQuoteMachine"><i
+                <div id="github" class="col-xs-2"><a href="https://github.com/MichaelLeeHobbs/fccQuoteMachine"><i
                     class='fa fa-github fa-3x pull-right'></i></a></div>
             </div>
             <div class="row">
                 <div id="quoteContainer" class="col-xs-8 col-xs-offset-2">
                     <div class="row">
-                        <div class="col-xs-12">
+                        <div class="col-xs-6">
                             <button class="btn center-block" id="newButton">New Quote</button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="btn center-block" id="tweetIt">Tweet It</button>
                         </div>
                     </div>
                     <div class="row text-center ">
-                        <div class="col-xs-12"><p id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non
+                        <div class="col-xs-12"><p id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Quisque non
                             urna
                             eu tortor tincidunt auctor. Nullam id ex eget nisl fermentum congue. Vestibulum sollicitudin
                             nulla quis enim pellentesque, ac convallis.</p></div>
@@ -84,8 +88,16 @@
     }(window, document, 'script', 'ga'));
     ga('create', 'UA-XXXXX-X', 'auto');
     ga('send', 'pageview');
+
+
     randomQuote();
-    $('#newButton').click(function(){randomQuote();});
+    $('#newButton').click(function () {
+        randomQuote();
+    });
+
+    $("#tweetIt").click(function () {
+        window.open("https://twitter.com/intent/tweet?text=" + $("#quote").text() + " %23" + $("#author").text().replace(" ", ""));
+    });
 </script>
 </body>
 </html>
